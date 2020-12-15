@@ -6,7 +6,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'DeliMeals',
+      title: 'Vamos cozinhar?',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -25,7 +25,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('DeliMeals'),
+        title: Text('Vamos cozinhar?'),
       ),
       body: Center(
         child: Text('Navegar é preciso!!'),
