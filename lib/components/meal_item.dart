@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:meals_app/utils/app_routes.dart';
 import '../models/meal.dart';
 
 class MealItem extends StatelessWidget {
@@ -7,14 +8,20 @@ class MealItem extends StatelessWidget {
 
   const MealItem(this.meal);
 
-  void _selectMeal() {
-
+  void _selectMeal(BuildContext context) {
+    Navigator.of(context).pushNamed(
+      AppRoutes.MEAL_DETAIL,
+      arguments: meal
+    ).then((result) {
+      // é onde pega o resultado quando vc apertou o botao de voltar da tela - pop
+      // parece bastante o setResult()
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: _selectMeal,
+      onTap: () => _selectMeal(context),
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15),
